@@ -1,16 +1,14 @@
 import java.util.ArrayList;
 public class StackArray implements Stack{
 
-
-    private  ArrayList<Object> stack =
-            new ArrayList<>();
+    private  ArrayList<Object> stack = new ArrayList<>();
 
     @Override
     public void push(Object item) {
         stack.add(0,item);
     }
     @Override
-    public Object pop() {
+    public Object pop() throws MyEmptyStackException{
         return stack.remove(0);
     }
     @Override
